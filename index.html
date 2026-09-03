@@ -46,6 +46,33 @@
     cursor: default;
   }
 
+  .hero-actions{
+  display:flex;
+  gap:15px;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  text-decoration:none;
+  color:white;
+  border:1px solid var(--line);
+  padding:12px 22px;
+  border-radius:999px;
+  font-family:var(--font-mono);
+  transition:.3s;
+}
+
+.hero-btn:hover{
+  border-color:var(--ember);
+  background:rgba(232,135,74,.15);
+}
+
+.hero-btn.primary{
+  background:var(--gold);
+  color:black;
+}
+
   /* ---------- WebGL background ---------- */
   #scene-canvas{
     position: fixed;
@@ -647,6 +674,8 @@
   }
   .form-status.error{ color: #e88a8a; }
 
+  
+
   .footer-note{
     position: relative;
     z-index: 2;
@@ -658,6 +687,31 @@
     text-transform: uppercase;
     color: var(--parchment-dim);
   }
+  .project-actions{
+  margin-top:18px;
+}
+.project-btn{
+  display:inline-block;
+  padding:14px 28px;
+  border:2px solid var(--gold);
+  border-radius:999px;
+  text-decoration:none;
+  color:#fff;
+  background:rgba(242,197,114,.15);
+  font-family:var(--font-mono);
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.08em;
+  transition:all .3s ease;
+  box-shadow:0 0 20px rgba(242,197,114,.25);
+}
+.project-btn:hover{
+  background:var(--gold);
+  color:#000;
+  transform:translateY(-3px);
+  box-shadow:0 0 30px rgba(242,197,114,.5);
+}
+
 
   @media (max-width: 620px){
     .project-row{ grid-template-columns: 1fr; }
@@ -709,20 +763,49 @@
       <img class="avatar" src="eman.png" alt="Eman Tehseen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="avatar-fallback">ET</div>
     </div>
-    <p class="hero-tagline reveal">Computer Engineering student</p>
-    <p class="hero-intro reveal">Hands-on experience in embedded systems, digital design, machine learning, and full-stack web development. I've worked on FPGA, AI, and software projects through academic coursework and internships — from a processor built in Verilog to a deep learning model that reads MRI scans.</p>
-    <div class="hero-tags reveal">
-      <span>Embedded Systems &amp; FPGA</span>
-      <span>Machine Learning</span>
-      <span>Full-Stack Web Dev</span>
-    </div>
+   <p class="hero-tagline reveal">
+  Exploring the space between hardware and intelligence.
+
+<div class="hero-tags reveal">
+  <span>AI That Sees</span>
+<span>Processors That Think</span>
+<span>Software That Connects</span>
+</div>
+    <div class="hero-actions reveal">
+
+  <a href="Eman_Tehseen_Resume.pdf"
+   class="hero-btn primary"
+   target="_blank">
+   Resume
+</a>
+
+
+  <a href="https://www.linkedin.com/in/eman-tehseen-93685b3b7/"
+   class="hero-btn"
+   target="_blank">
+   LinkedIn
+</a>
+   
+  
+  <a href="https://github.com/Iman123473"
+     class="hero-btn"
+     target="_blank">
+     GitHub
+  </a>
+
+</div>
+    
+
+
     <div class="scroll-cue"><span class="line"></span>SCROLL</div>
   </section>
 
   <section id="about" data-chapter="About">
     <span class="eyebrow reveal">About</span>
     <h2 class="chapter-title reveal">The path so far</h2>
-    <p class="chapter-body reveal">I'm a Computer Engineering student at COMSATS University Islamabad, Abbottabad Campus, working the seam between hardware and intelligence. Some days that means routing a datapath in Verilog for a processor headed to an FPGA; other days it's fine-tuning a CNN to tell four kinds of brain tumor apart, or shipping a full-stack platform real students use. Same instinct for building systems, different terrain each time.</p>
+<p class="chapter-body reveal">
+My journey in computer engineering lies at the intersection of logic, innovation, and technology. Whether designing digital systems, building full-stack platforms, or developing intelligent applications, I am driven by the challenge of creating solutions that are both technically sound and meaningful in practice.
+</p>
     <div class="meta-row reveal">
       <span>◇ Abbottabad, Pakistan</span>
       <span>◇ English, Urdu</span>
@@ -738,7 +821,7 @@
     </div>
     <div class="award-line reveal">
       <span class="stars">★★★★★</span>
-      <span>Named to the COMSATS Campus Honors List for a 4.00 GPA</span>
+      <span>Consistently named to the COMSATS Campus Honors List for three consecutive academic years, maintaining a 4.00 GPA.</span>
     </div>
   </section>
 
@@ -832,98 +915,140 @@
 
   <section id="projects" data-chapter="Projects">
     <span class="eyebrow reveal">Projects</span>
-    <h2 class="chapter-title reveal">Ten builds worth mentioning</h2>
+    <h2 class="chapter-title reveal"> Builds worth mentioning</h2>
     <div class="project-list">
 
-      <div class="project-row reveal">
-        <div class="project-index">01</div>
-        <div>
-          <h3 class="project-title">Brain Tumor MRI Classification</h3>
-          <p class="project-desc">An automated MRI classification system identifying Glioma, Meningioma, Pituitary Tumor, and No-Tumor classes using transfer learning across ResNet50 and EfficientNet, with fine-tuning, dropout regularization, batch normalization, and optimized TensorFlow pipelines. Reached 98.7% test accuracy and 99.4% training accuracy on the final EfficientNetB3 model.</p>
-          <div class="project-tags"><span>TensorFlow</span><span>CNN</span><span>ResNet50</span><span>EfficientNetB3</span><span>Python</span></div>
-        </div>
-      </div>
+     <div class="project-row reveal">
+  <div class="project-index">01</div>
+  <div>
+    <h3 class="project-title">Brain Tumor MRI Classification</h3>
 
-      <div class="project-row reveal">
-        <div class="project-index">02</div>
-        <div>
-          <h3 class="project-title">32-bit Single-Cycle RISC-V Processor</h3>
-          <p class="project-desc">A complete RV32I-compatible processor designed in Verilog HDL — Program Counter, Instruction Memory, Register File, ALU, Data Memory, Control Unit and ALU Control Unit built from scratch, simulated in ModelSim, synthesized in Xilinx, and deployed to a Spartan-3 FPGA development board.</p>
-          <div class="project-tags"><span>Verilog HDL</span><span>ModelSim</span><span>Xilinx</span><span>Spartan-3 FPGA</span></div>
-        </div>
-      </div>
+    <p class="project-desc">
+      Developed a deep learning powered MRI classification system capable of identifying four brain tumor categories: Glioma, Meningioma, Pituitary Tumor, and No Tumor. Leveraging transfer learning with EfficientNetB3 and ResNet50, the solution incorporates advanced preprocessing, data augmentation, batch normalization, and dropout techniques to enhance accuracy and generalization. The final EfficientNetB3 model achieved 98.7% test accuracy, demonstrating the potential of AI-assisted diagnosis in medical imaging.
+    </p>
 
-      <div class="project-row reveal">
-        <div class="project-index">03</div>
-        <div>
-          <h3 class="project-title">CampusConnect</h3>
-          <p class="project-desc">A full-stack university collaboration platform supporting authentication, event management, announcements, and team/project management, with Row-Level Security on Supabase and a PostgreSQL schema for events, teams, and profiles. Deployed on Vercel.</p>
-          <div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span></div>
-        </div>
-      </div>
+    <div class="project-tags">
+      <span>TensorFlow</span>
+      <span>CNN</span>
+      <span>ResNet50</span>
+      <span>EfficientNetB3</span>
+      <span>Python</span>
+    </div>
 
-      <div class="project-row reveal">
-        <div class="project-index">04</div>
-        <div>
-          <h3 class="project-title">AI-Based Smart Surveillance System</h3>
-          <p class="project-desc">A real-time security monitoring platform using OpenCV and machine learning for fire/smoke detection and unauthorized-access classification, deployed on Raspberry Pi for edge-based intelligent monitoring.</p>
-          <div class="project-tags"><span>Raspberry Pi</span><span>OpenCV</span><span>Machine Learning</span></div>
-        </div>
-      </div>
+    <div class="project-actions">
+      <a href="https://github.com/Iman123473/Brain--Tumor-MRI-Classification"
+         class="project-btn"
+         target="_blank"
+         rel="noopener noreferrer">
+        View Code →
+      </a>
+    </div>
+  </div>
+</div>
 
-      <div class="project-row reveal">
-        <div class="project-index">05</div>
-        <div>
-          <h3 class="project-title">Text-to-Speech System with DSP Effects</h3>
-          <p class="project-desc">A speech synthesis application with customizable pitch, speed, and audio effects, integrating digital signal processing techniques for enhanced audio output and usability.</p>
-          <div class="project-tags"><span>Python</span><span>Pyttsx3</span><span>Pydub</span></div>
-        </div>
-      </div>
+<div class="project-row reveal">
+  <div class="project-index">02</div>
+  <div>
+    <h3 class="project-title">32-bit Single-Cycle RISC-V Processor</h3>
 
-      <div class="project-row reveal">
-        <div class="project-index">06</div>
-        <div>
-          <h3 class="project-title">User Authentication API</h3>
-          <p class="project-desc">A secure authentication service with JWT-based sessions and bcrypt password hashing, backed by MongoDB.</p>
-          <div class="project-tags"><span>FastAPI</span><span>MongoDB</span><span>JWT</span><span>bcrypt</span></div>
-        </div>
-      </div>
+    <p class="project-desc">
+      A complete RV32I-compatible processor designed in Verilog HDL. Program Counter, Instruction Memory, Register File, ALU, Data Memory, Control Unit, and ALU Control Unit were built from scratch, simulated in ModelSim, synthesized in Xilinx ISE, and deployed on a Spartan-3 FPGA development board.
+    </p>
 
-      <div class="project-row reveal">
-        <div class="project-index">07</div>
-        <div>
-          <h3 class="project-title">Weather Application</h3>
-          <p class="project-desc">A weather application built with React.js, integrating external APIs for real-time weather information retrieval.</p>
-          <div class="project-tags"><span>React.js</span><span>REST APIs</span></div>
-        </div>
-      </div>
+    <div class="project-tags">
+      <span>Verilog HDL</span>
+      <span>RISC-V</span>
+      <span>ModelSim</span>
+      <span>Xilinx ISE</span>
+      <span>Spartan-3 FPGA</span>
+    </div>
 
-      <div class="project-row reveal">
-        <div class="project-index">08</div>
-        <div>
-          <h3 class="project-title">Rock Paper Scissors</h3>
-          <p class="project-desc">A Rock Paper Scissors game in C++ featuring GUI components and score-tracking mechanisms.</p>
-          <div class="project-tags"><span>C++</span><span>GUI</span></div>
-        </div>
-      </div>
+    <div class="project-actions">
+      <a href="https://github.com/Iman123473/Single_cycle-RISC-V-processor-"
+         class="project-btn"
+         target="_blank"
+         rel="noopener noreferrer">
+        View Code →
+      </a>
+    </div>
+  </div>
+</div>
 
-      <div class="project-row reveal">
-        <div class="project-index">09</div>
-        <div>
-          <h3 class="project-title">Social Media Desktop Application</h3>
-          <p class="project-desc">A desktop social media application built with Python Tkinter, with user authentication and posting functionality.</p>
-          <div class="project-tags"><span>Python</span><span>Tkinter</span></div>
-        </div>
-      </div>
+<div class="project-row reveal">
+  <div class="project-index">03</div>
+  <div>
+    <h3 class="project-title">CampusConnect</h3>
 
-      <div class="project-row reveal">
-        <div class="project-index">10</div>
-        <div>
-          <h3 class="project-title">16-bit Full Adder</h3>
-          <p class="project-desc">Designed and simulated a 16-bit Full Adder using Multisim, with embedded system measurement tools built using Arduino and Proteus.</p>
-          <div class="project-tags"><span>Multisim</span><span>Arduino</span><span>Proteus</span></div>
-        </div>
-      </div>
+    <p class="project-desc">
+      A full-stack university collaboration platform supporting authentication, event management, announcements, and team/project management, with Row-Level Security on Supabase and a PostgreSQL schema for events, teams, and profiles. Deployed on Vercel.
+    </p>
+
+    <div class="project-tags">
+      <span>Next.js</span>
+      <span>React</span>
+      <span>TypeScript</span>
+      <span>Supabase</span>
+      <span>PostgreSQL</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="https://github.com/Iman123473/CampusConnect"
+         class="project-btn"
+         target="_blank"
+         rel="noopener noreferrer">
+        View Code →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="project-row reveal">
+  <div class="project-index">04</div>
+  <div>
+    <h3 class="project-title">AI-Based Smart Surveillance System</h3>
+
+    <p class="project-desc">
+      A real-time security monitoring platform using OpenCV and machine learning for fire/smoke detection and unauthorized-access classification, deployed on Raspberry Pi for edge-based intelligent monitoring.
+    </p>
+
+    <div class="project-tags">
+      <span>Raspberry Pi</span>
+      <span>OpenCV</span>
+      <span>Machine Learning</span>
+    </div>
+
+
+<div class="project-row reveal">
+  <div class="project-index">06</div>
+  <div>
+    <h3 class="project-title">Bilingual Text-to-Speech System with DSP Audio Effects</h3>
+
+    <p class="project-desc">
+      Developed a bilingual English-Urdu Text-to-Speech application using Python, Tkinter, pyttsx3, gTTS, and Google Translate. The system converts text into natural speech, supports automatic English-to-Urdu translation, and incorporates Digital Signal Processing (DSP) features including pitch shifting, echo effects, volume enhancement, and audio normalization. Implemented multithreaded processing to ensure a responsive GUI while performing real-time speech generation and audio processing.
+    </p>
+
+    <div class="project-tags">
+      <span>Python</span>
+      <span>Tkinter</span>
+      <span>pyttsx3</span>
+      <span>gTTS</span>
+      <span>Google Translate API</span>
+      <span>Pydub</span>
+      <span>DSP</span>
+      <span>Multithreading</span>
+    </div>
+
+   <div class="project-actions">
+   <a href="https://github.com/Iman123473/Bilingual-Text-to-Speech-System-with-DSP-Audio-Effects"
+      class="project-btn"
+      target="_blank"
+      rel="noopener noreferrer">
+      View Code →
+      </a>
+    </div>
+  </div>
+</div>
+      
 
     </div>
   </section>
